@@ -1,0 +1,28 @@
+.hero-body {
+    margin-bottom: 5px;
+}
+.title {
+    text-align: center;
+
+}
+
+.citysearchtitle {
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.citysearchcolumn{
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+    margin-top: 40px;
+}
+
+.citysearchdisplay {
+    margin-left: 20px;
+    margin-top: 40px;
+    outline: 1px solid black;
+}
+
+.searchbutton {
+    margin-top: 15px;
+}
