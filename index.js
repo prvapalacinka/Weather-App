@@ -1,18 +1,24 @@
 // var weatherText = getElementsById('#citydisplay')
 // console.log(weatherText);
 
-var inputval = document.querySelector('#cityinput')
+var inputval = document.getElementById('cityinput');
 var btn = document.querySelector('#searchbtn');
 var city = document.querySelector('#citydisplay')
 var temp = document.querySelector('#temp')
 var wind = document.querySelector('#wind')
 var humidity = document.querySelector('#humidity')
 var uvIndex = document.querySelector('#UVIndex')
-
+// third attempt example:
+// http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey
 btn.addEventListener('click', function () {
-    console.log(btn);
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=imperial&exclude={part}&appid={180208500378a70366e858082ab1a71c}')
+    var search = inputval.value;
+    console.log(search);
+    console.log(inputval);
+    // fetch('https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=imperial&exclude={part}&appid={180208500378a70366e858082ab1a71c}')
+//    fetch ( "http://api.openweathermap.org/data/2.5/weather?q=" + search + "&appid=" + "180208500378a70366e858082ab1a71c" )
+    fetch ("https://api.openweathermap.org/data/2.5/weather?q="+search+",us&units=imperial&appid=388964fc2ffae47f3a212b1f9aac6d8b")
         .then(response => {
+            console.log(response);
             return response.json();
         })
         .then(data => {
@@ -29,3 +35,6 @@ btn.addEventListener('click', function () {
             humidity.innerHTML = `UV Index: <span>${uvInd} km/h<span>`
         })
     });
+
+
+    // https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=imperial&exclude={part}&appid={180208500378a70366e858082ab1a71c}
