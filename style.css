@@ -18,11 +18,16 @@
 }
 
 .citysearchdisplay {
+    border-radius: 15px;
     margin-left: 20px;
     margin-top: 40px;
     outline: 1px solid black;
 }
 
 .searchbutton {
+    margin-top: 15px;
+}
+
+.searchhistorycolumn {
     margin-top: 15px;
 }

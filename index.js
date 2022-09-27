@@ -27,7 +27,7 @@ btn.addEventListener('click', function () {
             var windspd = data['current.wind_speed']
             var hmdty = data['current.humidity']
             var uvInd = data['current.uvi']
-            //Now with the help of innerHTML you have to make arrangements to display all the information in the webpage.
+          
             city.innerHTML = `Weather of <span>${nameval}<span>`
             temp.innerHTML = `Temperature: <span>${temperature} C</span>`
             wind.innerHTML = `Wind Speed: <span>${windspd} km/h<span>`
@@ -35,6 +35,5 @@ btn.addEventListener('click', function () {
             humidity.innerHTML = `UV Index: <span>${uvInd} km/h<span>`
         })
     });
-
 
     // https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=imperial&exclude={part}&appid={180208500378a70366e858082ab1a71c}
